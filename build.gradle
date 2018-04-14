@@ -1,6 +1,7 @@
 buildscript {
     ext {
         springBootVersion = '2.0.1.RELEASE'
+        keycloakVersion = '3.3.0.Final'
     }
     repositories {
         mavenCentral()
@@ -25,6 +26,11 @@ repositories {
 
 
 dependencies {
+    // Keycloak
+    compile('org.keycloak:keycloak-spring-boot-starter')
+
+    // Thymeleaf
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile('org.springframework.boot:spring-boot-starter')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
