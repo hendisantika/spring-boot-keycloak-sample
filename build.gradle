@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.6.8'
+        springBootVersion = '2.6.9'
         keycloakVersion = '3.3.0.Final'
     }
     repositories {
