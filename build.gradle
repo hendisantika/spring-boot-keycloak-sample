@@ -1,14 +1,7 @@
-buildscript {
-    ext {
-        springBootVersion = '2.7.0'
-        keycloakVersion = '16.1.0.Final'
-    }
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
+plugins {
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
 }
 
 apply plugin: 'java'
@@ -27,10 +20,10 @@ repositories {
 
 dependencies {
     // Keycloak
-    compile('org.keycloak:keycloak-spring-boot-starter')
+    implementation('org.keycloak:keycloak-spring-boot-starter:18.0.0')
 
     // Thymeleaf
-    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-    compile('org.springframework.boot:spring-boot-starter')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+    implementation('org.springframework.boot:spring-boot-starter')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
