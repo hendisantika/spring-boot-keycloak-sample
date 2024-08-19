@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
     // Keycloak
-    implementation('org.keycloak:keycloak-spring-boot-starter:24.0.5')
+    implementation('org.keycloak:keycloak-spring-boot-starter:25.0.3')
 
     // Thymeleaf
     implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
